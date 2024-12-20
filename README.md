@@ -1,5 +1,8 @@
 # awdeet-dashboard
 
+Hosted URL -> https://awdeet-dashboard.vercel.app/
+Github URL -> https://github.com/ayazq18/awdeet-dashboard
+
 # Command to run the project -> npm start
 
 
