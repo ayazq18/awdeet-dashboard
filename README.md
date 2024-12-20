@@ -18,3 +18,4 @@
 6. NavBar is created for just giving a nice feel to the website.
 7. I have used Context API for managing the state and functions globally eliminating the props drilling.
 8. And the Home.jsx is called in the App.js component.
+9. Mock data is store in the MockData folder in _productData.js.

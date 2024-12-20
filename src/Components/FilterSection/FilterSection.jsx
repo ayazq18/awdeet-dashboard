@@ -74,7 +74,11 @@ function FilterSection({ categories }) {
 
       <Divider />
 
-      <Typography gutterBottom sx={{ mb: 2, mt: 5 }}>Sort by reach and engagement</Typography>
+      {/* Sort by reach and engagement */}
+
+      <Typography gutterBottom sx={{ mb: 2, mt: 5 }}>
+        Sort by reach and engagement
+      </Typography>
       <FormControl fullWidth>
         <InputLabel>Sort By</InputLabel>
         <Select

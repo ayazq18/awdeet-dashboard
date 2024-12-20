@@ -52,6 +52,8 @@ function ProductCards({ handleOpen, selectedItem }) {
             </Typography>
             <Typography>Category: {item.category}</Typography>
             <Typography>Location: {item.location}</Typography>
+
+            {/* only shows when the modal opens */}
             {selectedItem && (
               <>
                 <Typography>Followers: {item.followers}</Typography>
@@ -59,6 +61,8 @@ function ProductCards({ handleOpen, selectedItem }) {
                 <Typography>Shares: {item.shares}</Typography>
               </>
             )}
+
+            {/* only shows on the dashboard */}
 
             {!selectedItem && (
               <Button
@@ -79,8 +83,14 @@ function ProductCards({ handleOpen, selectedItem }) {
           </Card>
         ))
       ) : (
-        <Box sx={{width:{xs:'100%', md:'80%', lg:'50%'}, display:'flex', justifyContent:'center'}}>
-        <img src="/empty.avif" alt="empty content" width='100%' />
+        <Box
+          sx={{
+            width: { xs: "100%", md: "80%", lg: "50%" },
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <img src="/empty.avif" alt="empty content" width="100%" />
         </Box>
       )}
     </>

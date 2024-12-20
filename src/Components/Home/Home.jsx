@@ -67,6 +67,7 @@ function Home() {
                 <Box sx={{ width: "50px", pl: "5px" }}>
                   <img
                     src="/awedeet_logo.jpg"
+                    alt="logo"
                     width="100%"
                     style={{ borderRadius: "50px" }}
                   />

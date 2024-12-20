@@ -12,6 +12,7 @@ export const ProductProvider = ({ children }) => {
     setOpen((prev) => !prev);
   };
 
+  // Category handler
   const handleCategoryChange = (category) => {
     setFilteredData(
       category
@@ -20,6 +21,7 @@ export const ProductProvider = ({ children }) => {
     );
   };
 
+  // ENgagement handler
   const handleScoreRangeChange = ([min, max]) => {
     setFilteredData(
       ProductData.filter(
@@ -28,7 +30,6 @@ export const ProductProvider = ({ children }) => {
           item.likes + item.shares + item.comments <= max
       )
     );
-
   };
 
   // Sorting Handler
