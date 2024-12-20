@@ -35,10 +35,10 @@ function FilterSection({ categories }) {
 
   return (
     <Box
-      sx={{ borderRight: { md: "1px solid #ACACAC80" }, p: 2, height: "100%",
-     }}
+      sx={{ borderRight: { md: "1px solid #ACACAC80" }, p: 2, height: "100%" }}
     >
       {/* Category Filter */}
+      <Typography gutterBottom>Filter by category</Typography>
       <FormControl fullWidth sx={{ mb: 5 }}>
         <InputLabel>Category</InputLabel>
         <Select
@@ -74,7 +74,8 @@ function FilterSection({ categories }) {
 
       <Divider />
 
-      <FormControl fullWidth sx={{ mb: 2, mt: 5 }}>
+      <Typography gutterBottom sx={{ mb: 2, mt: 5 }}>Sort by reach and engagement</Typography>
+      <FormControl fullWidth>
         <InputLabel>Sort By</InputLabel>
         <Select
           value={sortOption}
