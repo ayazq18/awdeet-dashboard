@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Box,
   Divider,
@@ -28,9 +28,31 @@ function FilterSection({ categories }) {
     handleCategoryChange(category);
   };
 
+  // custom debounce hook
+  function useDebounce(value, delay) {
+    const [debouncedValue, setDebouncedValue] = useState(value);
+
+    useEffect(() => {
+      const handler = setTimeout(() => {
+        setDebouncedValue(value);
+      }, delay);
+
+      return () => {
+        clearTimeout(handler);
+      };
+    }, [value, delay]);
+
+    return debouncedValue;
+  }
+
+  const debouncedRange = useDebounce(scoreRange, 300);
+  
+  useEffect(() => {
+    handleScoreRangeChange(debouncedRange);
+  }, [debouncedRange]);
+
   const handleRangeChange = (event, newRange) => {
     setScoreRange(newRange);
-    handleScoreRangeChange(newRange);
   };
 
   return (
